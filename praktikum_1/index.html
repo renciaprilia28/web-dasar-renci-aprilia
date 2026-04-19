@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Website Pembelajaran HTML</title>
+
+    <!-- HUBUNGKAN CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+    <h1>Website Pembelajaran HTML</h1>
+    <p>Contoh penggunaan berbagai tag HTML</p>
+
+    <nav>
+    <a href="index.html">Home</a> |
+    <a href="materi.html">Materi</a> |
+    <a href="kontak.html">Kontak</a>
+</nav>
+</header>
+<!-- TAMBAHKAN MAIN -->
+<main>
+       <h2>Selamat Datang</h2>
+    <p id="teksHome">Ini halaman utama </p>
+    
+       <h2>Pembelajaran</h2>
+    <p id="teksHome">Media Pembelajaran </p>
+
+</main>
+
+<footer>
+    <p>© 2026 Pembelajaran HTML</p>
+</footer>
+
+<script>
+function validasi() {
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+
+    if (nama.length < 3) {
+        document.getElementById("pesan").innerText = "Nama minimal 3 karakter!";
+        return false;
+    }
+
+    if (!email.includes("@")) {
+        document.getElementById("pesan").innerText = "Email tidak valid!";
+        return false;
+    }
+
+    document.getElementById("pesan").innerText = "Berhasil dikirim!";
+    return false;
+}
+</script>
+
+</body>
+</html>

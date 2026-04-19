@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+    
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Materi</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- HEADER -->
+<header class="navbar">
+    <h1>Website Pembelajaran HTML</h1>
+    <p>Contoh penggunaan berbagai tag HTML</p>
+
+    <nav>
+    <a href="index.html">Home</a> |
+    <a href="materi.html">Materi</a> |
+    <a href="kontak.html">Kontak</a>
+</nav>
+</header>
+<body>
+
+ <!-- KONTEN -->
+<main class="container">
+<h2>Demo Java Script</h2>
+
+    <button onclick="document.getElementById('teksHome').innerHTML='Teks berhasil diubah!'">
+        Ubah Teks
+        <p id="teksHome">teks ini akan berubah</p>
+    </button>
+
+    <br><br>
+
+    <button onclick="document.body.style.backgroundColor='lightgreen'">
+        Ganti Warna Background
+    </button>
+
+    <!-- HEADING & PARAGRAF -->
+    <section class="card">
+        <h2>A. Elemen HTML</h2>
+        <p>
+            Ini adalah paragraf dengan 
+            <b>teks tebal</b>, 
+            <i>miring</i>, 
+            <u>garis bawah</u>, 
+            <mark>highlight</mark>, 
+            dan <span style="color:red;">warna teks merah</span>.
+        </p>
+    </section>
+
+    <!-- LINK -->
+    <section class="card">
+        <h2>B. Atribut HTML</h2>
+        <p>
+            Contoh Link:
+            <a href="https://google.com" target="_blank">Google</a>
+        </p>
+    </section>
+
+    <!-- GAMBAR -->
+    <section class="card">
+        <h2>C. Gambar HTML</h2>
+
+        <div class="gallery">
+            <div class="img-box">
+                <img src="download (2).jpg">
+                <p>sayang 1</p>
+            </div>
+
+            <div class="img-box">
+                <img src="download (1).jpeg">
+                <p>sayang 2</p>
+            </div>
+
+            <div class="img-box">
+                <img src="download.jpg">
+                <p>sayang 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIST -->
+    <section class="card">
+        <h2>D. List HTML</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <ol>
+            <li>Belajar</li>
+            <li>Latihan</li>
+            <li>Praktek</li>
+        </ol>
+    </section>
+
+    <!-- TABEL -->
+    <section class="card">
+        <h2>E. Tabel HTML</h2>
+
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Mata Kuliah</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Pemrograman Web</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sistem Operasi</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- FORM -->
+    <section class="card">
+        <h2>F. Form HTML & Validasi</h2>
+
+        <form onsubmit="return validasi()">
+            <label>Nama:</label>
+            <input type="text" id="nama" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" required>
+
+            <label>Umur:</label>
+            <input type="number" id="umur" required>
+
+            <label>Tanggal Lahir:</label>
+            <input type="date" required>
+
+            <label>Pilih Warna:</label>
+            <input type="color">
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <p id="pesan" style="color:red;"></p>
+    </section>
+
+</main>
+<footer>
+    <p>© 2026 Pembelajaran HTML</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
