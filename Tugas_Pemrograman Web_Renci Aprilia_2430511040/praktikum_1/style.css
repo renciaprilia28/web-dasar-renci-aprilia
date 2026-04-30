@@ -1,0 +1,86 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f0f5f1;
+}
+
+/* HEADER */
+.navbar {
+    background: #06ed21;
+    padding: 20px;
+    text-align: center;
+}
+
+/* CONTAINER */
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* CARD */
+.card {
+    background: rgb(248, 4, 223);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* FORM */
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px;
+    background: #27ae60;
+    color: white;
+    border: none;
+}
+
+/* GALERI */
+.gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.img-box {
+    width: 30%;
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.img-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.img-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

@@ -1,64 +1,41 @@
-    #PROJEK IMPLEMENTASI JTML, CSS, DAN JAVASCRIPT
-projek ini bertujuan untuk membuat website dasar sederhana sebagai media pembelajaran dalam memahami:
-1. Struktur dan tag HTML 
-2. Styling menggunakan CSS
-3. Interaksi menggunakan JAVASCRIPT
-   Melalui project ini, diharapkan dapat memahami langkah-langkah pembuatan website dari awal.
+📚 Interactive Learning Web: Dasar HTML & PHP
 
-    #CARA MENJALANKAN PROJECT 
-1. Buat folder project di dalam:
-   laragon/www/4C-praktikum_1
-2. Buka folder tersebut menggunakan Visual Studio Code
-3. Buat file berikut:
-   a. index.html -> halaman Home
-   b. materi.html -> halaman Materi 
-   c. kontak.html -> halaman Kontak 
-4. Tambahkan kode HTML sesuai kebutuhan di masing-masing file 
-5. Buat file CSS: 
-   a. style.css -> untuk mengatur tampilan website 
-6. Buat file JavaScript: 
-   a. script.js -> untuk menambahkan interaksi 
-7. Hubungkan file: 
-   a. HTML ke CSS -> <link rel="stylesheet" href="style.css"> 
-   b. HTML ke JS -> <script src="script.js"><script> 
-8. Jalankan Laragon, lalu buka browser:
-https://localhost/4C-praktikum_1 
+Website edukasi berbasis web yang dirancang untuk mendemonstrasikan implementasi tag HTML modern, manipulasi DOM lewat JavaScript, serta manajemen data menggunakan PHP dan MySQL. Project ini cocok untuk eksplorasi bagi siapa pun yang baru terjun di dunia web development.
 
-    #STRUKTUR PROJECT 
-4C-praktikum_1/
-│── index.html
-│── materi.html
-│── kontak.html
-│── style.css
-│── script.js 
+🚀 Fitur Unggulan
+- Interactive UI: Eksplorasi tag-tag HTML (Text Formatting, Table, & Media) dengan tampilan yang sudah clean berkat font Poppins.
+- Dynamic Action: Simulasi perubahan elemen secara real-time menggunakan JavaScript tanpa perlu *refresh* halaman.
+- Form Handling: Validasi input dua lapis (Client-side & Server-side) untuk menjamin keamanan data.
+- Data Persistence: Terintegrasi dengan MySQL untuk menyimpan dan menampilkan data input secara dinamis.
 
-    #DOKUMENTASI PROJECT 
-Website ini terdiri dari 3 halaman utama: 
-1. Home 
-   a. Halaman utama website 
-   b. Berisi sapaan dan tombol interaktif (JavaScript)
-2. Materi 
-Berisi contoh penggunaan berbagai elemen HTML: 
-   a. Heading dan paragraf 
-   b. Gambar
-   c. List (ul & ol)
-   d. Link 
-   e. Tabel 
-   f. Forum input 
-3. Kontak 
-   a. Berisi form input (nama, email, dll)
-   b. Menggunakan validasi sederhana dengan JavaScript 
+🛠️ Tech Stack
+- Languages: PHP (Native), JavaScript (ES6), HTML5, CSS3.
+- Database: MySQL.
+- Typography: Poppins via Google Fonts.
 
-    #FITUR YANG DIGUNAKAN 
-1. HTML dasar (tag, atribut, struktur) 
-2. CSS (layout, warna, desain aestetic) 
-3. JavaScript: 
-   a. Inline JS 
-   b. External JS 
-   c. Event (click) 
-   d. DOM manipulation 
-   e. Validasi form 
-   f. Loop dan kondisi (if-else) 
+⚙️ Konfigurasi & Setup
+1. Persiapan Database
+Buat database baru di MySQL dan jalankan query berikut untuk membuat tabel:
+```sql
+CREATE TABLE kontak_masuk (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    umur INT,
+    tgl_lahir DATE,
+    warna VARCHAR(20)
+);
+```
+2. Koneksi Database
+Pastikan file `koneksi.php` sudah disesuaikan dengan kredensial server lokal Anda:
+```php
+$conn = mysqli_connect("localhost", "root", "", "nama_database_kamu");
+```
+3. Deployment
+Pindahkan seluruh folder project ke dalam direktori server (`htdocs` atau `www`), lalu akses melalui `http://localhost/nama_folder/` di browser.
 
-    #KESIMPULAN 
-Project ini membantu memahami dasar pembuatan website, mulai dari struktur, desain, hingga interaksi sederhana menggunakan JavaSpript 
+📂 Struktur File
+ `index.php` - Halaman utama & logika proses data.
+ `koneksi.php` - Jembatan antara aplikasi dan database.
+ `style.css` - Styling interface agar lebih modern dan enak dilihat.
+ `script.js` - Logika validasi dan interaktivitas halaman. 

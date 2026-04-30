@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Pembelajaran HTML</title>
+
+    <!-- HUBUNGKAN CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+    <h1>Website Pembelajaran HTML</h1>
+    <p>Contoh penggunaan berbagai tag HTML</p>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Materi</a> |
+        <a href="#">Kontak</a>
+    </nav>
+</header>
+
+<!-- KONTEN -->
+<main class="container">
+
+    <!-- HEADING & PARAGRAF -->
+    <section class="card">
+        <h2>A. Elemen HTML</h2>
+        <p>
+            Ini adalah paragraf dengan 
+            <b>teks tebal</b>, 
+            <i>miring</i>, 
+            <u>garis bawah</u>, 
+            <mark>highlight</mark>, 
+            dan <span style="color:red;">warna teks merah</span>.
+        </p>
+    </section>
+
+    <!-- LINK -->
+    <section class="card">
+        <h2>B. Atribut HTML</h2>
+        <p>
+            Contoh Link:
+            <a href="https://google.com" target="_blank">Google</a>
+        </p>
+    </section>
+
+    <!-- GAMBAR -->
+    <section class="card">
+        <h2>C. Gambar HTML</h2>
+
+        <div class="gallery">
+            <div class="img-box">
+                <img src="download (2).jpg">
+                <p>sayang 1</p>
+            </div>
+
+            <div class="img-box">
+                <img src="download (1).jpeg">
+                <p>sayang 2</p>
+            </div>
+
+            <div class="img-box">
+                <img src="download.jpg">
+                <p>sayang 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIST -->
+    <section class="card">
+        <h2>D. List HTML</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <ol>
+            <li>Belajar</li>
+            <li>Latihan</li>
+            <li>Praktek</li>
+        </ol>
+    </section>
+
+    <!-- TABEL -->
+    <section class="card">
+        <h2>E. Tabel HTML</h2>
+
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Mata Kuliah</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Pemrograman Web</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sistem Operasi</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- FORM -->
+    <section class="card">
+        <h2>F. Form HTML & Validasi</h2>
+
+        <form onsubmit="return validasi()">
+            <label>Nama:</label>
+            <input type="text" id="nama" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" required>
+
+            <label>Umur:</label>
+            <input type="number" id="umur" required>
+
+            <label>Tanggal Lahir:</label>
+            <input type="date" required>
+
+            <label>Pilih Warna:</label>
+            <input type="color">
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <p id="pesan" style="color:red;"></p>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Pembelajaran HTML</p>
+</footer>
+
+<!-- VALIDASI -->
+<script>
+function validasi() {
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+
+    if (nama.length < 3) {
+        document.getElementById("pesan").innerText = "Nama minimal 3 karakter!";
+        return false;
+    }
+
+    if (!email.includes("@")) {
+        document.getElementById("pesan").innerText = "Email tidak valid!";
+        return false;
+    }
+
+    document.getElementById("pesan").innerText = "Berhasil dikirim!";
+    return false;
+}
+</script>
+
+</body>
+</html>
